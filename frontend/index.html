@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JIIII KIIII SEVER</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <canvas id="embers" aria-hidden="true"></canvas>
+
+  <!-- LOGIN -->
+  <main id="login-view" class="view scene scene-dragon">
+    <div class="bg-image" id="dragon-bg"></div>
+    <div class="vignette"></div>
+    <div class="smoke s1"></div><div class="smoke s2"></div>
+    <div class="flames" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+
+    <section class="login-wrap">
+      <h1 class="title">JIIII KIIII SEVER</h1>
+      <p class="welcome">WELCOME BOSS</p>
+
+      <form id="login-form" class="glass" autocomplete="off" novalidate>
+        <p class="hint">USER NAME : KIKU7<br>PASSWORD : AK47</p>
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" autocapitalize="characters" required>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" required>
+        <p id="error" class="error" role="alert" hidden></p>
+        <button id="login-btn" type="submit">LOGIN</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- DASHBOARD -->
+  <main id="dash-view" class="view scene scene-skeleton" hidden>
+    <div class="bg-image" id="skeleton-bg"></div>
+    <div class="vignette fps-vignette"></div>
+    <div class="smoke s1"></div><div class="smoke s2"></div>
+
+    <div class="skeleton-stage" id="stage">
+      <img id="skeleton-img" alt="" hidden>
+      <div id="skeleton-fallback" class="skull">&#9760;</div>
+    </div>
+    <div class="flames big" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+    <header class="topbar">
+      <div>
+        <h2 class="title small">JIIII KIIII SEVER</h2>
+        <p class="welcome small">WELCOME BOSS <span id="who"></span></p>
+      </div>
+      <button id="logout-btn" class="ghost" type="button">Log out</button>
+    </header>
+
+    <aside class="glass user-panel">
+      <h3>Logged-in users</h3>
+      <ul id="user-list" aria-live="polite"><li class="empty">Loading...</li></ul>
+    </aside>
+  </main>
+
+  <script src="/script.js"></script>
+</body>
+</html>
